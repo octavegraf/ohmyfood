@@ -1,0 +1,105 @@
+body {
+  background-color: #F7F7F7;
+  font-family: "Roboto";
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+section {
+  padding: 60px 20px 60px 20px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+.header {
+  text-align: center;
+}
+.header__logo {
+  padding: 20px 0 10px 0;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);
+  z-index: 2;
+  position: relative;
+}
+.header__location {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  background-color: #EAEAEA;
+}
+
+.hero {
+  text-align: center;
+}
+.hero__h1 {
+  font-size: 23px;
+  font-weight: bold;
+  margin: 0px 50px 20px 50px;
+}
+.hero__h2 {
+  font-size: 18px;
+  font-weight: 300;
+  color: black;
+}
+.hero__button {
+  padding: 18px 23px 18px 23px;
+  border-radius: 50px;
+  background-color: rgb(147, 86, 220);
+  background-image: linear-gradient(rgb(255, 121, 218), rgba(147, 86, 220, 0));
+  border: none;
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: all 200ms;
+}
+.hero__button:hover {
+  background-color: rgb(255, 121, 218);
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.35);
+}
+
+.functionning {
+  background-color: white;
+}
+.functionning__list {
+  padding: 0px 0px 0px 15px;
+}
+.functionning__li {
+  padding: 30px 0px 30px 0px;
+  margin: 25px 0 0 0;
+  background-color: #F7F7F7;
+  border-radius: 17.5px;
+  counter-increment: custom;
+  list-style-type: none;
+  position: relative;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
+  font-weight: 500;
+}
+.functionning__li:before {
+  content: counter(custom) " ";
+  display: inline-block;
+  position: absolute;
+  left: -12.5px;
+  width: 25px;
+  padding: 2.5px 0 2.5px 0;
+  border-radius: 25px;
+  text-align: center;
+  align-items: center;
+  background-color: rgb(147, 86, 220);
+  color: white;
+}
+
+.fa-solid {
+  color: #808080;
+  margin: 0 27.5px 0 100px;
+}
+.fa-solid .fa-store {
+  color: rgb(147, 86, 220);
+}/*# sourceMappingURL=index.css.map */
