@@ -95,11 +95,11 @@ h3 {
   background-color: rgb(147, 86, 220);
   color: white;
 }
-
-.fa-solid {
-  color: #808080;
-  margin: 0 27.5px 0 100px;
+.functionning .fa-solid {
+  color: #808080 !important;
+  margin: 0 27.5px 0 35px;
+  
 }
-.fa-solid .fa-store {
-  color: rgb(147, 86, 220);
+.functionning-purple {
+  background-color: #f2eafb;
 }/*# sourceMappingURL=index.css.map */
