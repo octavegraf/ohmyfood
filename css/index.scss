@@ -95,8 +95,8 @@ h3 {
         box-shadow: 0px 5px 5px rgb(0 0 0 / 0.25);
         font-weight: 500;
 
-        
-        &-purple{
+
+        &-purple {
             background-color: lighten($primary, 35%);
         }
 
@@ -124,43 +124,60 @@ h3 {
     font-size: 20px;
 }
 
-    .fa-store {
-        color: $primary;
-    }
+.fa-store {
+    color: $primary;
+}
 
-.restaurants{
-    &__article{
+.restaurants {
+    &__article {
         width: 100%;
         display: flex;
         flex-direction: column;
         background-color: white;
         margin: 9px 0 9px 0;
         border-radius: 15px;
+        overflow: hidden;
+
+        &-new::before {
+            content: "Nouveau";
+            font-weight: 500;
+            background-color: $tertiary;
+            color: darken($tertiary,35%);
+            font-size: 14px;
+            display: block;
+            position: absolute;
+            padding: 8px 10px 8px 8px;
+            margin: 10px 0 0 0;
+            right: 33px;
+            width: fit-content;
+            border-radius: 3px;            
+        }
 
     }
 
-    &__info{
-        background-color: red;
+    &__info {
         width: fit-content;
-    
+        height: fit-content;
+
     }
-    &__img{
+
+    &__img {
         overflow: hidden;
         width: 100%;
         height: 175px;
         object-fit: cover;
     }
 
-    &__h4{
+    &__h4 {
         margin: 20px 0 0 14px;
         font-size: 18px;
         font-weight: 700;
     }
 
-    &__h5{
+    &__h5 {
         margin: 0;
         font-size: 18px;
         font-weight: 300;
-        margin: 0 0 0 14px;
+        margin: 0 0 18px 14px;
     }
 }

@@ -116,10 +116,25 @@ h3 {
   background-color: white;
   margin: 9px 0 9px 0;
   border-radius: 15px;
+  overflow: hidden;
+}
+.restaurants__article-new::before {
+  content: "Nouveau";
+  font-weight: 500;
+  background-color: rgb(153, 226, 208);
+  color: #2c9c81;
+  font-size: 14px;
+  display: block;
+  position: absolute;
+  padding: 8px 10px 8px 8px;
+  margin: 10px 0 0 0;
+  right: 33px;
+  width: fit-content;
+  border-radius: 3px;
 }
 .restaurants__info {
-  background-color: red;
   width: fit-content;
+  height: fit-content;
 }
 .restaurants__img {
   overflow: hidden;
@@ -136,7 +151,7 @@ h3 {
   margin: 0;
   font-size: 18px;
   font-weight: 300;
-  margin: 0 0 0 14px;
+  margin: 0 0 18px 14px;
 }
 
 /*# sourceMappingURL=index.css.map */
