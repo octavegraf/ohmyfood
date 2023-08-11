@@ -1,3 +1,21 @@
+a {
+  color: black;
+  text-underline-offset: none;
+  text-decoration: none;
+}
+a:link {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+a:active {
+  text-decoration: none;
+}
+
 body {
   background-color: #F7F7F7;
   font-family: "Roboto";
@@ -15,6 +33,10 @@ h3 {
 
 .header {
   text-align: center;
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+  top: 0;
 }
 .header__logo {
   padding: 20px 0 10px 0;
@@ -23,6 +45,7 @@ h3 {
   box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);
   z-index: 2;
   position: relative;
+  background-color: white;
 }
 .header__location {
   height: 50px;
@@ -34,6 +57,7 @@ h3 {
 }
 
 .hero {
+  margin-top: 115px;
   text-align: center;
 }
 .hero__h1 {
@@ -70,16 +94,19 @@ h3 {
 }
 .functionning__list {
   padding: 0px 0px 0px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
 }
 .functionning__li {
+  display: block;
   padding: 30px 0px 30px 0px;
-  margin: 25px 0 0 0;
   background-color: #F7F7F7;
   border-radius: 17.5px;
   counter-increment: custom;
   list-style-type: none;
   position: relative;
-  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   font-weight: 500;
 }
 .functionning__li-purple {
@@ -109,15 +136,20 @@ h3 {
   color: rgb(147, 86, 220);
 }
 
+.restaurants {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
 .restaurants__article {
   width: 100%;
   display: flex;
   flex-direction: column;
   background-color: white;
-  margin: 9px 0 9px 0;
   border-radius: 15px;
   overflow: hidden;
   position: relative;
+  box-shadow: 1px 0 10px rgba(0, 0, 0, 0.15);
 }
 .restaurants__article-new::before {
   content: "Nouveau";
@@ -128,8 +160,8 @@ h3 {
   display: block;
   position: absolute;
   padding: 8px 10px 8px 8px;
-  margin: 10px 0 0 0;
-  right: 33px;
+  margin: 13px 0 0 0;
+  right: 13px;
   width: fit-content;
   border-radius: 3px;
 }
@@ -153,22 +185,49 @@ h3 {
 
 .fa-heart {
   display: block;
-  font-size: 21px;
+  font-size: 22px;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
-  background: linear-gradient(white 50%, rgb(147, 86, 220) 51%, rgb(255, 121, 218));
+  background: linear-gradient(white 49%, rgb(147, 86, 220) 50%, rgb(255, 121, 218));
   background-size: 100% 200%;
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
   transition: 400ms all;
   position: absolute;
-  bottom: 25px;
+  bottom: 30px;
   right: 0px;
 }
 .fa-heart:hover {
   background-position: bottom;
   -webkit-text-stroke-color: transparent;
+}
+
+.footer {
+  background-color: #353535;
+  padding: 25px;
+}
+.footer__img {
+  width: 100px;
+  margin: 0 0 24px 0;
+}
+.footer__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+.footer__li {
+  font-size: 16px;
+  color: white;
+  margin: 0 0 8px 0;
+}
+
+.fa-utensils, .fa-handshake-angle {
+  margin: 0 10px 0 0;
+  font-size: 14px;
+  color: white;
 }
 
 /*# sourceMappingURL=index.css.map */
