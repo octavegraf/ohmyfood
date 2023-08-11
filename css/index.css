@@ -117,6 +117,7 @@ h3 {
   margin: 9px 0 9px 0;
   border-radius: 15px;
   overflow: hidden;
+  position: relative;
 }
 .restaurants__article-new::before {
   content: "Nouveau";
@@ -131,10 +132,6 @@ h3 {
   right: 33px;
   width: fit-content;
   border-radius: 3px;
-}
-.restaurants__info {
-  width: fit-content;
-  height: fit-content;
 }
 .restaurants__img {
   overflow: hidden;
@@ -153,8 +150,25 @@ h3 {
   font-weight: 300;
   margin: 0 0 18px 14px;
 }
-.restaurants__heart {
-  fill: red;
+
+.fa-heart {
+  display: block;
+  font-size: 21px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  background: linear-gradient(white 50%, rgb(147, 86, 220) 51%, rgb(255, 121, 218));
+  background-size: 100% 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: 400ms all;
+  position: absolute;
+  bottom: 25px;
+  right: 0px;
+}
+.fa-heart:hover {
+  background-position: bottom;
+  -webkit-text-stroke-color: transparent;
 }
 
 /*# sourceMappingURL=index.css.map */

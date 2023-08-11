@@ -137,6 +137,7 @@ h3 {
         margin: 9px 0 9px 0;
         border-radius: 15px;
         overflow: hidden;
+        position: relative;
 
         &-new::before {
             content: "Nouveau";
@@ -152,12 +153,6 @@ h3 {
             width: fit-content;
             border-radius: 3px;
         }
-
-    }
-
-    &__info {
-        width: fit-content;
-        height: fit-content;
 
     }
 
@@ -181,8 +176,26 @@ h3 {
         margin: 0 0 18px 14px;
     }
 
+}
 
-    &__heart {
-        fill: red;
-    }
+.fa-heart {
+    display: block;
+    font-size: 21px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    background: linear-gradient(white 50%, $primary 51%, $secondary);
+    background-size: 100% 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: 400ms all;
+    position: absolute;
+    bottom: 25px;
+    right: 0px;
+
+
+    &:hover {
+        background-position: bottom;
+        -webkit-text-stroke-color: transparent;
+        }
 }
