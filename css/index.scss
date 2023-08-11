@@ -142,7 +142,7 @@ h3 {
             content: "Nouveau";
             font-weight: 500;
             background-color: $tertiary;
-            color: darken($tertiary,35%);
+            color: darken($tertiary, 35%);
             font-size: 14px;
             display: block;
             position: absolute;
@@ -150,7 +150,7 @@ h3 {
             margin: 10px 0 0 0;
             right: 33px;
             width: fit-content;
-            border-radius: 3px;            
+            border-radius: 3px;
         }
 
     }
@@ -179,5 +179,10 @@ h3 {
         font-size: 18px;
         font-weight: 300;
         margin: 0 0 18px 14px;
+    }
+
+
+    &__heart {
+        fill: red;
     }
 }
