@@ -17,7 +17,7 @@ a:active {
 }
 
 body {
-  background-color: #F7F7F7;
+  background-color: #353535;
   font-family: "Roboto";
   margin: 0 auto 0 auto;
   -webkit-font-smoothing: antialiased;
@@ -146,6 +146,7 @@ h3 {
 .hero {
   margin-top: 115px;
   text-align: center;
+  background-color: #F7F7F7;
 }
 .hero__h1 {
   font-size: 23px;
@@ -241,6 +242,9 @@ h3 {
   color: rgb(147, 86, 220);
 }
 
+.restaurants {
+  background-color: #F7F7F7;
+}
 .restaurants__wrapper {
   display: flex;
   flex-direction: column;
@@ -327,13 +331,7 @@ h3 {
   background-color: #353535;
   padding: 25px;
   margin: 0 auto 0 auto;
-}
-@media only screen and (min-width: 992px) {
-  .footer {
-    position: relative;
-    bottom: 0px;
-    width: 100%;
-  }
+  min-height: 100%;
 }
 .footer__img {
   width: 100px;
