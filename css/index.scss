@@ -50,6 +50,86 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+.loader {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    position: fixed;
+    z-index: 10;
+    background-color: #F7F7F7;
+    display: flex;
+    animation: loader 1500ms;
+    opacity: 100%;
+    visibility: hidden;
+    
+    @keyframes loader {
+        0% {
+            visibility: visible;
+        }
+        50%{
+            opacity: 100%;
+        }
+
+        100% {
+            opacity: 0%;
+        }
+    }
+
+    &__wrapper{
+        width: fit-content;
+        margin: auto;
+    }
+
+    &__spinner {
+        width: 48px;
+        height: 48px;
+        display: block;
+        margin: 15px auto;
+        position: relative;
+        color: $primary;
+        box-sizing: border-box;
+        animation: rotation 1s linear infinite;
+        &::after,
+        &:before {
+            content: '';
+            box-sizing: border-box;
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            top: 50%;
+            left: 50%;
+            transform: scale(0.5) translate(0, 0);
+            background-color: $secondary;
+            border-radius: 50%;
+            animation: loader__spinner 1s infinite ease-in-out;
+        }
+
+        &::before {
+            background-color: $primary;
+            transform: scale(0.5) translate(-48px, -48px);
+        }
+
+        @keyframes rotation {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes loader__spinner {
+            50% {
+                transform: scale(1) translate(-50%, -50%);
+            }
+        }
+    }
+}
+
+
 .fa-solid {
     color: #808080;
     margin: 0 20px 0 35px;
@@ -309,8 +389,9 @@ h3 {
     background-color: #353535;
     padding: 25px;
     margin: 0 auto 0 auto;
+
     @include devices(desktop) {
-        position: absolute;
+        position: relative;
         bottom: 0px;
         width: 100%;
     }
@@ -332,6 +413,7 @@ h3 {
         padding: 0;
         display: flex;
         flex-direction: column;
+
         @include devices(tablet) {
             width: fit-content;
             margin: 0 auto 0 auto;
@@ -343,13 +425,14 @@ h3 {
             width: auto;
             max-width: 1600px;
             grid-template-columns: 1fr 1fr 1fr 1fr;
-}
+        }
     }
 
     &__li {
         font-size: 16px;
         color: white;
         margin: 0 0 8px 0;
+
         @include devices (tablet) {
             text-align: left;
         }
