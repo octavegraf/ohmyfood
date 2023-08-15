@@ -21,6 +21,23 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
+a {
+  text-underline-offset: none;
+  text-decoration: none;
+}
+a:link {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+a:active {
+  text-decoration: none;
+}
+
 /* Variables */
 /* Mixins */
 /* Îcones FontAwesome */
@@ -49,14 +66,26 @@ time, mark, audio, video {
   position: absolute;
   top: 35px;
   right: 40px;
+  cursor: pointer;
 }
 .fa-heart:hover {
   background-position: 50% 70%;
   -webkit-text-stroke-color: #F4F4F4;
 }
 
+.fa-circle-check {
+  font-size: 22px;
+  color: white;
+  margin: auto;
+  transform: rotate(360deg);
+}
+
 body {
+  padding: 68px 0 0 0;
   background-color: #F4F4F4;
+  font-family: "Roboto";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .header {
@@ -83,18 +112,184 @@ body {
   padding: 30px 15px;
   border-radius: 40px;
 }
-.menu__banner {
+.menu__banner { /* Image en dehors de la section "menu" */
   width: 100%;
   height: 260px;
   object-fit: cover;
 }
 .menu__h1 {
-  font-family: "Shrikhand", cursive;
+  font-family: "Shrikhand";
   font-size: 27px;
   width: fit-content;
 }
 .menu__h2 {
   text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 300;
+  margin: 0 0 18px 0;
+}
+.menu__h2::before { /* Soulignement" */
+  content: "";
+  position: absolute;
+  border-bottom: 3px solid rgb(153, 226, 208);
+  width: 40px;
+  height: 22px;
+  display: block;
+}
+.menu__h3 {
+  font-size: 18px;
+  font-weight: 500;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 100%;
+  display: block;
+  overflow: hidden;
+}
+.menu__h4 {
+  font-size: 15px;
+  font-weight: 300;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: fit-content;
+  display: block;
+  overflow: hidden;
+  margin: 0 12px 0 0;
+}
+.menu__h5 {
+  font-size: 15px;
+  font-weight: 800;
+  display: block;
+  width: fit-content;
+}
+.menu__entrance, .menu__main_course, .menu__dessert {
+  margin: 40px 0 0 0;
+}
+.menu__item {
+  margin: 12px 0 0 0;
+  padding: 12px 20px 12px 12px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 2px 0 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 500ms;
+}
+.menu__item:hover {
+  padding: 12px 80px 12px 12px;
+  overflow: hidden;
+  transition: all 500ms;
+}
+.menu__item .menu__checkmark {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: -60px;
+  top: 0;
+  background-color: rgb(153, 226, 208);
+  width: 60px;
+  height: 63px;
+  margin: auto;
+  transition: all 500ms;
+}
+.menu__item:hover .fa-circle-check {
+  transform: rotate(0deg);
+  transition: all 500ms;
+}
+.menu__item:hover > .menu__checkmark {
+  right: 0;
+  transition: all 500ms;
+}
+.menu__item_info_wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.order_button {
+  display: block;
+  min-width: 190px;
+  width: fit-content;
+  margin: 30px auto 0 auto;
+  padding: 18px 23px 18px 23px;
+  border-radius: 50px;
+  background-color: rgb(147, 86, 220);
+  background-image: linear-gradient(rgb(255, 121, 218), rgba(147, 86, 220, 0));
+  border: none;
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  text-align: center;
+  transition: all 200ms;
+}
+.order_button:hover {
+  opacity: 0.75;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.65);
+}
+
+.footer {
+  background-color: #353535;
+  padding: 25px;
+  margin: 0 auto 0 auto;
+  min-height: 100%;
+}
+.footer__img {
+  width: 100px;
+  margin: 0 0 24px 0;
+  display: block;
+}
+@media only screen and (min-width: 768px) {
+  .footer__img {
+    margin: 0 auto 24px auto;
+  }
+}
+.footer__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+@media only screen and (min-width: 768px) {
+  .footer__list {
+    width: fit-content;
+    margin: 0 auto 0 auto;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .footer__list {
+    display: grid;
+    gap: 1fr;
+    width: auto;
+    max-width: 1600px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+.footer__li {
+  font-size: 16px;
+  margin: 0 0 8px 0;
+}
+@media only screen and (min-width: 768px) {
+  .footer__li {
+    text-align: left;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .footer__li {
+    text-align: center;
+  }
+}
+.footer__li a {
+  color: white;
+}
+.footer .fa-utensils,
+.footer .fa-handshake-angle {
+  margin: 0 10px 0 0;
+  font-size: 14px;
+  color: white;
 }
 
 /*# sourceMappingURL=menu.css.map */
