@@ -79,8 +79,8 @@ $tertiary: rgb(153, 226, 208);
     font-size: 1.375rem;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: black;
-    background: radial-gradient(circle, $primary, $secondary 50%, #F4F4F4 55%);
-    background-size: 100% 400%;
+    background: linear-gradient(#F4F4F4 50%, $primary 66.33%, $secondary );
+    background-size: 100% 300%;
     background-position: 50% 0%;
     background-repeat: no-repeat;
     background-clip: text;
@@ -91,12 +91,22 @@ $tertiary: rgb(153, 226, 208);
     top: 35px;
     right: 40px;
     cursor: pointer;
+    @include devices(desktop) {
+    -webkit-text-stroke-width: 1px;
+    width: 100%;
+    font-size: 50px;
+    text-align: center;
+    top: -65px;
+    left: 0;
+    }
 
 
     &:hover {
-        background-position: 50% 70%;
+        background-position: 50% 100%;
         -webkit-text-stroke-color: #F4F4F4;
-    }
+        @include devices(desktop) {
+        -webkit-text-stroke-color: transparent;
+    }}
 }
 
 .fa-circle-check {
@@ -136,6 +146,10 @@ body{
 
 }
 
+main{
+    min-height: 100vh;
+}
+
 .menu{
 
     background-color: #F4F4F4;
@@ -143,18 +157,43 @@ body{
     margin: -40px 0 0 0;
     padding: 30px 15px ;
     border-radius: 40px ;
+    @include devices(desktop) {
+   margin: -40px auto 0 auto;
+    background-color: transparent;
+    display: grid;
+    gap: 15px;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 1600px;
+    }
 
     &__banner{ /* Image en dehors de la section "menu" */
         width: 100%;
         height: 260px;
         object-fit: cover;
+        @include devices(tablet) {
+            height: 300px;
+        }
     }
 
     &__h1{
         font-family: 'Shrikhand';
         font-size: 27px;
         width: fit-content;
-    }
+        @include devices(desktop) {
+        position: absolute;
+        display: block;
+        width: 100%;
+        text-align: center;
+        top: -300px;
+        padding-top: 150px;
+        padding-bottom: 150px;
+        left: 0;
+        font-size: 60px;
+        color: white;
+        text-shadow: 0px 0 30px rgba(0, 0, 0, 1);
+        ;
+
+    }}
 
     &__h2{
         text-transform: uppercase;
@@ -203,9 +242,10 @@ body{
     
     &__entrance, &__main_course, &__dessert{
         margin: 40px 0 0 0;
-        animation: item-loading 1s;
+        animation: item-loading 1s ease forwards;
         opacity: 0;
-        animation-fill-mode: forwards;
+        @include devices(desktop) {
+        }
     }
 
     &__main_course{
@@ -283,7 +323,7 @@ body{
     display: block;
     min-width: 190px;
     width: fit-content;
-    margin: 30px auto 0 auto;
+    margin: 30px auto 40px auto;
     padding: 18px 23px 18px 23px;
     border-radius: 50px;
     background-color: $primary;
@@ -337,7 +377,7 @@ body{
 
         @include devices(desktop) {
             display: grid;
-            gap: 1fr;
+            gap: 25px;
             width: auto;
             max-width: 1600px;
             grid-template-columns: 1fr 1fr 1fr 1fr;
