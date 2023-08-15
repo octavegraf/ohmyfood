@@ -202,6 +202,9 @@ h3 {
     }
 
     &__button {
+        display: block;
+        width: fit-content;
+        margin: 30px auto 0 auto;
         padding: 18px 23px 18px 23px;
         border-radius: 50px;
         background-color: $primary;
@@ -427,7 +430,6 @@ h3 {
 
     &__li {
         font-size: 16px;
-        color: white;
         margin: 0 0 8px 0;
 
         @include devices (tablet) {
@@ -436,6 +438,10 @@ h3 {
 
         @include devices (desktop) {
             text-align: center;
+        }
+
+        a {
+            color: white;
         }
     }
 

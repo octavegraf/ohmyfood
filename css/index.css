@@ -159,6 +159,9 @@ h3 {
   color: black;
 }
 .hero__button {
+  display: block;
+  width: fit-content;
+  margin: 30px auto 0 auto;
   padding: 18px 23px 18px 23px;
   border-radius: 50px;
   background-color: rgb(147, 86, 220);
@@ -367,7 +370,6 @@ h3 {
 }
 .footer__li {
   font-size: 16px;
-  color: white;
   margin: 0 0 8px 0;
 }
 @media only screen and (min-width: 768px) {
@@ -379,6 +381,9 @@ h3 {
   .footer__li {
     text-align: center;
   }
+}
+.footer__li a {
+  color: white;
 }
 .footer .fa-utensils,
 .footer .fa-handshake-angle {
