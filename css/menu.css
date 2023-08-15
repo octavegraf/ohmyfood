@@ -163,6 +163,25 @@ body {
 }
 .menu__entrance, .menu__main_course, .menu__dessert {
   margin: 40px 0 0 0;
+  animation: item-loading 1s;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+.menu__main_course {
+  animation-delay: 250ms;
+}
+.menu__dessert {
+  animation-delay: 500ms;
+}
+@keyframes item-loading {
+  0% {
+    transform: translate(0, 50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
 }
 .menu__item {
   margin: 12px 0 0 0;

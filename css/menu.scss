@@ -200,10 +200,33 @@ body{
         width: fit-content;
         }
 
-
+    
     &__entrance, &__main_course, &__dessert{
         margin: 40px 0 0 0;
+        animation: item-loading 1s;
+        opacity: 0;
+        animation-fill-mode: forwards;
     }
+
+    &__main_course{
+        animation-delay: 250ms;
+    }
+
+    &__dessert{
+        animation-delay: 500ms;
+    }
+
+    @keyframes item-loading{
+        0% {
+            transform: translate(0, 50px);
+            opacity: 0;
+        }
+        100% {
+            transform: translate(0, 0);
+            opacity: 1;
+        }
+    }
+
     &__item{
         margin: 12px 0 0 0;
         padding: 12px 20px 12px 12px;
@@ -349,3 +372,4 @@ body{
         color: white;
     }
 }
+
