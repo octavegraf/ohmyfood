@@ -15,6 +15,7 @@ Ma toute première expérience avec Sass m'a fait comprendre à quel point ce la
 
 #### Le cœur
 Après y avoir passé une journée à y mettre toute mon énergie, en vain, j'ai opté pour utiliser une îcone _FontAwesome_ sous forme de texte. J'ai ensuité masqué ce texte et y ai intégré un _background-image dégradé_ en deux parties. L'une totalement blanche, l'autre contenant le dégradé qui s'affiche en _:hover_. Une simple _transition_ fait bouger le _background-image_ et permet d'obtenir l'effet de remplissage, comme demandé dans le brief.
+
 ![Animation cœur](readme/heart-animation.gif)
 
 #### Le reste des animations
