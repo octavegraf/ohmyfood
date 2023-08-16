@@ -19,4 +19,4 @@ Après y avoir passé une journée à y mettre toute mon énergie, en vain, j'ai
 ![Animation cœur](readme/heart-animation.gif)
 
 #### Le reste des animations
-J'ai trouvé l'utilisation des keyframes et des transitions relativement facile. Le principe des _keyframes_ est exactement le même que le fonctionnement de la timeline d'_After Effects_, tandis que les _transitions_ ressemble trait pour trait au fonctionnement des transitions intelligentes de _Figma_.
+J'ai trouvé l'utilisation des _keyframes_ et des transitions relativement facile. Le principe des _keyframes_ est exactement le même que le fonctionnement de la timeline d'_After Effects_, tandis que les _transitions_ ressemble trait pour trait au fonctionnement des transitions intelligentes de _Figma_.
