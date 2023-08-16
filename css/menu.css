@@ -70,12 +70,14 @@ a:active {
 }
 @media only screen and (min-width: 992px) {
   .fa-heart {
-    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-width: 0px;
     width: 100%;
     font-size: 50px;
     text-align: center;
     top: -65px;
     left: 0;
+    color: white;
+    text-shadow: 0px 0 30px rgb(0, 0, 0);
   }
 }
 .fa-heart:hover {
@@ -84,7 +86,8 @@ a:active {
 }
 @media only screen and (min-width: 992px) {
   .fa-heart:hover {
-    -webkit-text-stroke-color: transparent;
+    color: transparent;
+    text-shadow: 0 0 0 transparent;
   }
 }
 
@@ -141,7 +144,8 @@ main {
     max-width: 1600px;
   }
 }
-.menu__banner { /* Image en dehors de la section "menu" */
+.menu__banner {
+  /* Image en dehors de la section "menu" */
   width: 100%;
   height: 260px;
   object-fit: cover;
@@ -152,7 +156,7 @@ main {
   }
 }
 .menu__h1 {
-  font-family: "Shrikhand";
+  font-family: "Shrikhand", cursive;
   font-size: 27px;
   width: fit-content;
 }
@@ -177,7 +181,8 @@ main {
   font-weight: 300;
   margin: 0 0 18px 0;
 }
-.menu__h2::before { /* Soulignement" */
+.menu__h2::before {
+  /* Soulignement" */
   content: "";
   position: absolute;
   border-bottom: 3px solid rgb(153, 226, 208);

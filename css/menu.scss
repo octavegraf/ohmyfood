@@ -44,7 +44,8 @@ a {
     }
 }
 
-/* Variables */ $primary: rgb(147, 86, 220);
+/* Variables */
+$primary: rgb(147, 86, 220);
 $secondary: rgb(255, 121, 218);
 $tertiary: rgb(153, 226, 208);
 
@@ -91,22 +92,26 @@ $tertiary: rgb(153, 226, 208);
     top: 35px;
     right: 40px;
     cursor: pointer;
-    @include devices(desktop) {
-    -webkit-text-stroke-width: 1px;
-    width: 100%;
-    font-size: 50px;
-    text-align: center;
-    top: -65px;
-    left: 0;
-    }
 
+    @include devices(desktop) {
+        -webkit-text-stroke-width: 0px;
+        width: 100%;
+        font-size: 50px;
+        text-align: center;
+        top: -65px;
+        left: 0;
+        color: white;
+        text-shadow: 0px 0 30px rgba(0, 0, 0, 1);
+    }
 
     &:hover {
         background-position: 50% 100%;
         -webkit-text-stroke-color: #F4F4F4;
-        @include devices(desktop) {
-        -webkit-text-stroke-color: transparent;
-    }}
+        @include devices(desktop){
+        color: transparent;
+        text-shadow: 0 0 0 transparent;
+    }
+    }
 }
 
 .fa-circle-check {
@@ -118,7 +123,7 @@ $tertiary: rgb(153, 226, 208);
 }
 
 
-body{
+body {
     padding: 68px 0 0 0;
     background-color: #F4F4F4;
     font-family: 'Roboto';
@@ -146,72 +151,78 @@ body{
 
 }
 
-main{
+main {
     min-height: 100vh;
 }
 
-.menu{
+.menu {
 
     background-color: #F4F4F4;
     position: relative;
     margin: -40px 0 0 0;
-    padding: 30px 15px ;
-    border-radius: 40px ;
+    padding: 30px 15px;
+    border-radius: 40px;
+
     @include devices(desktop) {
-   margin: -40px auto 0 auto;
-    background-color: transparent;
-    display: grid;
-    gap: 15px;
-    grid-template-columns: 1fr 1fr 1fr;
-    max-width: 1600px;
+        margin: -40px auto 0 auto;
+        background-color: transparent;
+        display: grid;
+        gap: 15px;
+        grid-template-columns: 1fr 1fr 1fr;
+        max-width: 1600px;
     }
 
-    &__banner{ /* Image en dehors de la section "menu" */
+    &__banner {
+        /* Image en dehors de la section "menu" */
         width: 100%;
         height: 260px;
         object-fit: cover;
+
         @include devices(tablet) {
             height: 300px;
         }
     }
 
-    &__h1{
-        font-family: 'Shrikhand';
+    &__h1 {
+        font-family: 'Shrikhand', cursive;
         font-size: 27px;
         width: fit-content;
+
         @include devices(desktop) {
-        position: absolute;
-        display: block;
-        width: 100%;
-        text-align: center;
-        top: -300px;
-        padding-top: 150px;
-        padding-bottom: 150px;
-        left: 0;
-        font-size: 60px;
-        color: white;
-        text-shadow: 0px 0 30px rgba(0, 0, 0, 1);
-        ;
+            position: absolute;
+            display: block;
+            width: 100%;
+            text-align: center;
+            top: -300px;
+            padding-top: 150px;
+            padding-bottom: 150px;
+            left: 0;
+            font-size: 60px;
+            color: white;
+            text-shadow: 0px 0 30px rgba(0, 0, 0, 1);
+            ;
 
-    }}
+        }
+    }
 
-    &__h2{
+    &__h2 {
         text-transform: uppercase;
         font-size: 16px;
         font-weight: 300;
         margin: 0 0 18px 0;
 
-        &::before { /* Soulignement" */
-            content:"";
+        &::before {
+            /* Soulignement" */
+            content: "";
             position: absolute;
-            border-bottom: 3px solid $tertiary; 
+            border-bottom: 3px solid $tertiary;
             width: 40px;
             height: 22px;
             display: block;
         }
     }
 
-    &__h3{
+    &__h3 {
         font-size: 18px;
         font-weight: 500;
         white-space: nowrap;
@@ -220,8 +231,8 @@ main{
         display: block;
         overflow: hidden
     }
-    
-    &__h4{
+
+    &__h4 {
         font-size: 15px;
         font-weight: 300;
         white-space: nowrap;
@@ -232,42 +243,45 @@ main{
         margin: 0 12px 0 0;
     }
 
-    &__h5{
+    &__h5 {
         font-size: 15px;
         font-weight: 800;
         display: block;
         width: fit-content;
-        }
+    }
 
-    
-    &__entrance, &__main_course, &__dessert{
+
+    &__entrance,
+    &__main_course,
+    &__dessert {
         margin: 40px 0 0 0;
         animation: item-loading 1s ease forwards;
         opacity: 0;
-        @include devices(desktop) {
-        }
+
+        @include devices(desktop) {}
     }
 
-    &__main_course{
+    &__main_course {
         animation-delay: 250ms;
     }
 
-    &__dessert{
+    &__dessert {
         animation-delay: 500ms;
     }
 
-    @keyframes item-loading{
+    @keyframes item-loading {
         0% {
             transform: translate(0, 50px);
             opacity: 0;
         }
+
         100% {
             transform: translate(0, 0);
             opacity: 1;
         }
     }
 
-    &__item{
+    &__item {
         margin: 12px 0 0 0;
         padding: 12px 20px 12px 12px;
         background-color: white;
@@ -278,13 +292,13 @@ main{
         overflow: hidden;
         transition: all 500ms;
 
-        &:hover{
+        &:hover {
             padding: 12px 80px 12px 12px;
             overflow: hidden;
             transition: all 500ms;
         }
 
-        .menu__checkmark{
+        .menu__checkmark {
             display: flex;
             align-items: center;
             position: absolute;
@@ -297,19 +311,19 @@ main{
             transition: all 500ms;
         }
 
-        &:hover .fa-circle-check{
+        &:hover .fa-circle-check {
             transform: rotate(0deg);
             transition: all 500ms;
         }
 
-        &:hover > .menu__checkmark{
+        &:hover>.menu__checkmark {
             right: 0;
             transition: all 500ms;
         }
 
-        
-        
-        &_info_wrapper{
+
+
+        &_info_wrapper {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
@@ -319,7 +333,7 @@ main{
 
 }
 
-.order_button{
+.order_button {
     display: block;
     min-width: 190px;
     width: fit-content;
@@ -401,9 +415,7 @@ main{
         }
     }
 
-    &__fill{
-
-    }
+    &__fill {}
 
     .fa-utensils,
     .fa-handshake-angle {
@@ -412,4 +424,3 @@ main{
         color: white;
     }
 }
-
